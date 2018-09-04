@@ -52,7 +52,7 @@ $ npm run dev
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
 | `/user`     |  GET   | Display all users data |None | None        | 200              | 500            |
 #### Success Response
-`/user` and `POST`
+`/user` and `GET`
 ```
 {
     "usersData": [
