@@ -29,6 +29,20 @@ class ControllerUser {
         })
     }
 
+    static findAll(req, res) {
+        User.find((err, users) => {
+            if (!err) {
+                res.status(200).json({
+                    usersData : users
+                })
+            } else {
+                res.status(500).json({
+                    message : err.message
+                })
+            }
+        })
+    }
+
 }
 
 module.exports = ControllerUser
