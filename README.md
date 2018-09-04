@@ -1,6 +1,9 @@
-# Mongoose-CRUD
+# Documentation Practice
 
-Hacktive8 STUDENT DAILY TASK
+### Objective
+- Practicing writing documentation
+- Practicing mongoose
+- Practicing mongoDB
 
 ### Installing
 
@@ -16,12 +19,14 @@ to start the app, you need to type this on your terminal
 ```
 $ npm run dev
 ```
-## USER
----
+## API
+
+### User - Insert user data
+
 | URL         | Method | Description            |Data Body / Requirement                    | Data Params | Success Response | Error Response |
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
-| `/user`     |  POST  | Insert user data       |firstName,lastName,username,password,email | None        | 200              | 500            |
-### Success Response
+| `/user`     |  POST  | Insert user data       |firstName, lastName, username, password, email | None        | 200              | 500            |
+#### Success Response
 `/user` and `POST`
 ```
 {
@@ -40,27 +45,40 @@ $ npm run dev
 }
 ```
 ---
- 
+
+ ### User - Display all users data
 
 | URL         | Method | Description            |Data Body / Requirement                    | Data Params | Success Response | Error Response |
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
-| `/user`     |  GET   | Display all users data |firstName,lastName,username,password,email | None        | 200              | 500            |
-### Success Response
-`/user` and `POST`
+| `/user`     |  GET   | Display all users data |None | None        | 200              | 500            |
+#### Success Response
+`/user` and `GET`
 ```
 {
-    "message": "inserting data user success",
-    "userData": {
-        "balance": 0,
-        "_id": "5b8edc28aa50911954956928",
-        "firstName": "Gusti",
-        "lastName": "Andryean",
-        "password": "$2b$07$bKA0QE3CKm/8w71v2zH/luvz476DmlZt1iIjfWZMGlI93heRoPo76",
-        "email": "andryean@mail.com",
-        "createdAt": "2018-09-04T19:25:28.153Z",
-        "updatedAt": "2018-09-04T19:25:28.153Z",
-        "__v": 0
-    }
+    "usersData": [
+        {
+            "balance": 0,
+            "_id": "5b8edc28aa50911954956928",
+            "firstName": "Gusti",
+            "lastName": "Andryean",
+            "password": "$2b$07$bKA0QE3CKm/8w71v2zH/luvz476DmlZt1iIjfWZMGlI93heRoPo76",
+            "email": "andryean@mail.com",
+            "createdAt": "2018-09-04T19:25:28.153Z",
+            "updatedAt": "2018-09-04T19:25:28.153Z",
+            "__v": 0
+        },
+        {
+            "balance": 0,
+            "_id": "5b8ee8f7092a202015474b46",
+            "firstName": "Asrul",
+            "lastName": "Hidayat",
+            "password": "$2b$07$mTfCzbZQpvdaXy2UDNhBCukkMgz5JCinKQmIJcOcEWfcst8Vj8C5S",
+            "email": "talkAsrul@mail.com",
+            "createdAt": "2018-09-04T20:20:07.164Z",
+            "updatedAt": "2018-09-04T20:20:07.164Z",
+            "__v": 0
+        }
+    ]
 }
 ```
 ## Built With
