@@ -43,6 +43,23 @@ class ControllerUser {
         })
     }
 
+    static updateOne(req, res) {
+
+        User.updateOne({ _id: req.params.id }, req.body, (err, result) => {
+            if (!err) {
+                res.status(200).json({
+                    message : 'updating success',
+                    user : result
+                })
+            } else {
+                res.status(500).json({
+                    message : err.message
+                })
+            }
+        });
+  
+    }
+
 }
 
 module.exports = ControllerUser
