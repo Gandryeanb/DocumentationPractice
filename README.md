@@ -83,39 +83,21 @@ $ npm run dev
 ```
 ---
 
- ### User - Display all users data
+ ### User - Update users data
 
 | URL         | Method | Description            |Data Body / Requirement                    | Data Params | Success Response | Error Response |
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
-| `/user/:id` |  PUT   | Update users data      | firstName, lastName, username, password, email| Id        | 200              | 500            |
+| `/user/:id` |  PUT   | Update users data      | firstName, lastName, username, password, email (Min field : 1)| Id        | 200              | 500            |
 #### Success Response
-`/user` and `GET`
+`/user` and `PUT`
 ```
 {
-    "usersData": [
-        {
-            "balance": 0,
-            "_id": "5b8edc28aa50911954956928",
-            "firstName": "Gusti",
-            "lastName": "Andryean",
-            "password": "$2b$07$bKA0QE3CKm/8w71v2zH/luvz476DmlZt1iIjfWZMGlI93heRoPo76",
-            "email": "andryean@mail.com",
-            "createdAt": "2018-09-04T19:25:28.153Z",
-            "updatedAt": "2018-09-04T19:25:28.153Z",
-            "__v": 0
-        },
-        {
-            "balance": 0,
-            "_id": "5b8ee8f7092a202015474b46",
-            "firstName": "Asrul",
-            "lastName": "Hidayat",
-            "password": "$2b$07$mTfCzbZQpvdaXy2UDNhBCukkMgz5JCinKQmIJcOcEWfcst8Vj8C5S",
-            "email": "talkAsrul@mail.com",
-            "createdAt": "2018-09-04T20:20:07.164Z",
-            "updatedAt": "2018-09-04T20:20:07.164Z",
-            "__v": 0
-        }
-    ]
+    "message": "updating success",
+    "user": {
+        "n": 1,
+        "nModified": 1,
+        "ok": 1
+    }
 }
 ```
 ## Built With
