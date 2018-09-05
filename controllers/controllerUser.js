@@ -60,6 +60,22 @@ class ControllerUser {
   
     }
 
+    static removeOne(req, res) {
+
+        User.deleteOne({ _id: req.params.id },(err) => {
+            if (!err) {
+                res.status(200).json({
+                    message : 'deleting success'
+                })
+            } else {
+                res.status(500).json({
+                    message : err.message
+                })
+            }
+        });
+  
+    }
+
 }
 
 module.exports = ControllerUser
