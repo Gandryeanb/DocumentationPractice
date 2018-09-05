@@ -89,7 +89,7 @@ $ npm run dev
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
 | `/user/:id` |  PUT   | Update users data      | firstName, lastName, username, password, email (Min field : 1)| Id        | 200              | 500            |
 #### Success Response
-`/user` and `PUT`
+`/user/:id` and `PUT`
 ```
 {
     "message": "updating success",
