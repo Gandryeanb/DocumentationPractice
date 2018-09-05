@@ -100,6 +100,20 @@ $ npm run dev
     }
 }
 ```
+---
+
+ ### User - Delete users data
+
+| URL         | Method | Description            |Data Body / Requirement                    | Data Params | Success Response | Error Response |
+| ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
+| `/user/:id` | DELETE | Delete users data      | None                                      | Id          | 200              | 500            |
+#### Success Response
+`/user/:id` and `DELETE`
+```
+{
+    "message": "deleting success"
+}
+```
 ## Built With
 
 * [express](https://www.npmjs.com/package/express) - The web framework used
