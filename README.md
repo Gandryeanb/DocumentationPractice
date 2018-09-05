@@ -21,7 +21,7 @@ $ npm run dev
 ```
 ## API
 
-### User - Insert user data
+### :pushpin: User - Insert user data
 
 | URL         | Method | Description            |Data Body / Requirement                    | Data Params | Success Response | Error Response |
 | ----------- |:------:|:---------------------: |:-----------------------------------------:|:-----------:|:----------------:|:--------------:|
